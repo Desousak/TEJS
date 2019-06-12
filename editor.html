@@ -1,0 +1,47 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='css/editor.css'>
+</head>
+
+<body>
+    <div class='toolbar'>
+        <button onclick="document.execCommand('bold', false, null);"><b>B</b></button>
+        <button onclick="document.execCommand('italic', false, null);"><i>I</i></button>
+        <button onclick="document.execCommand('underline', false, null);"><u>U</u></button>
+
+        <div class='highlight-btns'>
+            <button class='highlight-btn' onclick="highlight('rgb(255, 255, 0)')">
+                <img src='img/highlight.png'>
+            </button>
+            <button class='highlight-color-btn'>V</button>
+        </div>
+
+        <button onclick="document.execCommand('justifyLeft', false, null);">
+            <img src='img/left-align.png'>
+        </button>
+        <button onclick="document.execCommand('justifyCenter', false, null);">
+            <img src='img/center-align.png'>
+        </button>
+        <button onclick="document.execCommand('justifyRight', false, null);">
+            <img src='img/right-align.png'>
+        </button>
+        <button id="draw" onclick="toggleDraw();">
+            <img src='img/pen-tool.png'>
+        </button>
+        <button id="erase" class="hidden" onclick="toggleErase()">
+            <img src='img/eraser-tool.png'>
+        </button>
+        <button id="pen-inc" class="hidden" onclick="pen_size *= 2">+</button>
+        <button id="pen-dec" class="hidden" onclick="pen_size /= 2">-</button>
+        <!-- <button onclick="increaseFontSize('.font-size');">Increase Size</button>
+        <input type='text' class='font-size'> -->
+    </div>
+
+    <div contenteditable="true" class='textarea' autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"><div><br></div></div>
+    <canvas id='penCanvas' class='noclick'></canvas>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src='js/editor.js'></script>
+    <script src='js/canvas.js'></script>
+</body>

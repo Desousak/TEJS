@@ -1,0 +1,96 @@
+.textarea {
+    margin: 1em;
+    background-color: lightgray;
+    width: 90vw;
+    /* height: 90vh; */
+    margin: 10px auto 10px auto;
+    /* overflow: scroll; */
+}
+
+.toolbar {
+    text-align: center;
+}
+.toolbar * {
+    vertical-align: middle;
+}
+
+.toolbar button {
+    width: 36px;
+    padding: 5px;
+    font-size: 21px;
+    border-radius: 5px;
+}
+
+.toolbar img {
+    width: 24px;
+    height: 24px;
+}
+
+.highlight-btns {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+}
+
+.highlight-btn {
+   border-radius: 5px 0px 0px 5px !important;
+}
+
+.highlight-color-btn {
+    height: 36px;
+    border-radius: 0px 5px 5px 0px !important;
+    padding: 1px !important;
+    width: 15px !important;
+    font-size: 10px !important;
+}
+
+.color-picker {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40px);
+    grid-auto-rows: 40px;
+    column-gap: 5px;
+    row-gap: 5px;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    /* top: 45px;
+    left: 930px; */
+
+    width: 175px;
+    height: 175px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    vertical-align: middle;
+
+    border: 1px solid grey;
+}
+
+.hidden {
+    display: none;
+}
+
+.noclick {
+    pointer-events: none;   
+}
+
+.active {
+    background-color: lightgrey !important;
+}
+
+#penCanvas {
+    position: absolute;
+    top: 54px;
+    /* left: 5%; */
+
+    width: 100vw;
+    /* height: 90vh; */
+}
