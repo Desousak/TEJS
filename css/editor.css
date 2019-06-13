@@ -1,29 +1,47 @@
-.textarea {
-    margin: 1em;
+body {
     background-color: lightgray;
+}
+
+.textarea {
     width: 90vw;
-    /* height: 90vh; */
-    margin: 10px auto 10px auto;
-    /* overflow: scroll; */
+    height: auto;
+    min-height: 90vh !important;
+    margin: 5rem auto 10px auto;
+    z-index: 100;
+    background-color: white;
+}
+
+#penCanvas {
+    z-index: 200;
 }
 
 .toolbar {
+    width: 100%;
+    left: 50%;
+    top: 0%;
+    padding: 0.5rem;
+    transform: translateX(-50%);
+    position: fixed;
     text-align: center;
+    background-color: white;
+
+    box-shadow: 0 5px 5px 5px rgba(0,0,0,0.25);
+    z-index: 300;
 }
 .toolbar * {
     vertical-align: middle;
 }
 
 .toolbar button {
-    width: 36px;
+    width: 2.25rem;
     padding: 5px;
-    font-size: 21px;
+    font-size: 1.3rem;
     border-radius: 5px;
 }
 
 .toolbar img {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .highlight-btns {
@@ -38,11 +56,11 @@
 }
 
 .highlight-color-btn {
-    height: 36px;
+    height: 2.25rem;
     border-radius: 0px 5px 5px 0px !important;
     padding: 1px !important;
     width: 15px !important;
-    font-size: 10px !important;
+    font-size: 0.5rem !important;
 }
 
 .color-picker {
