@@ -11,10 +11,6 @@ body {
     background-color: white;
 }
 
-#penCanvas {
-    z-index: 200;
-}
-
 .toolbar {
     width: 100%;
     left: 50%;
@@ -28,6 +24,7 @@ body {
     box-shadow: 0 5px 5px 5px rgba(0,0,0,0.25);
     z-index: 300;
 }
+
 .toolbar * {
     vertical-align: middle;
 }
@@ -80,7 +77,11 @@ body {
     height: 175px;
     border-radius: 5px;
     background-color: white;
-    padding: 5px
+    padding: 5px;
+
+    box-shadow: 0 2px 10px 5px rgba(0,0,0,0.2);
+
+    z-index: 400;
 }
 
 .color {
@@ -90,25 +91,4 @@ body {
     vertical-align: middle;
 
     border: 1px solid grey;
-}
-
-.hidden {
-    display: none;
-}
-
-.noclick {
-    pointer-events: none;   
-}
-
-.active {
-    background-color: lightgrey !important;
-}
-
-#penCanvas {
-    position: absolute;
-    top: 54px;
-    /* left: 5%; */
-
-    width: 100vw;
-    /* height: 90vh; */
 }

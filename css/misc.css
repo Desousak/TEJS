@@ -1,0 +1,11 @@
+.hidden {
+    display: none;
+}
+
+.noclick {
+    pointer-events: none;   
+}
+
+.active {
+    background-color: lightgrey !important;
+}
