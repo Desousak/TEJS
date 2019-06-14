@@ -1,5 +1,7 @@
 let pen_size = 2;
 
+// Note: getImageData and putImageData is slow for large canvas sizes
+
 $(function () {
     // Resize the canvas to the textarea's size on load
     resizeCanvas($('.textarea').width(), $('.textarea').height());
@@ -120,7 +122,7 @@ function resizeCanvas(w, h) {
     let image_data = context.getImageData(0, 0, canvas.width(), canvas.height());
     canvas.attr("width", w);
     canvas.attr("height", h);
-    // canvas.css("width", w);
+    canvas.css("width", w);
     canvas.css("height", h);
     context.putImageData(image_data, 0, 0);
 }
